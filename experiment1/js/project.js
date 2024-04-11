@@ -23,7 +23,7 @@ class MyProjectClass {
 }
 
 const fillers = {
-  adventurer: ["Galactus", "Einstein", "Penrose", "Fermi", "Cosmo", ""],
+  adventurer: ["Galactus", "Einstein", "Penrose", "Fermi", "Cosmo"],
   pre: ["Neutro", "Mali", "Galacto", "Astro"],
   post: ["gloria", "borus", "gladios","diria"],
   people: ["Malinians", "Empyreans", "Arcadians", "Celestians"],
