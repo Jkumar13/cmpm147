@@ -22,13 +22,54 @@ class MyProjectClass {
   }
 }
 
-function main() {
-  // create an instance of the class
-  let myInstance = new MyProjectClass("value1", "value2");
+const fillers = {
+  adventurer: ["Galactus", "Einstein", "Penrose", "Fermi", "Cosmo", ""],
+  pre: ["Neutro", "Mali", "Galacto", "Astro"],
+  post: ["gloria", "borus", "gladios","diria"],
+  people: ["Malinians", "Empyreans", "Arcadians", "Celestians"],
+  ship: ["The Nomius", "The Mighty Voyager", "The Bastion", "The Polaris"],
+  threat: ["supermassive black hole", "gamma ray burst", "comet", "solar flare", "supernova"],
+  num: ["10", "100", "1,000", "5,000", "10,000", "25,000", "50,000"],
+  currency: ["Astreums", "Avalons", "Metamatter", "Geodes"],
+  obstacles: ["asteroids", "dead planet fragments", "neutron stars", "red giants", "white dwarf star"],
+  message: ["distress call", "distress beacon", "cosmic plead", "nova alert"],
+  
+};
 
-  // call a method on the instance
-  myInstance.myMethod();
+const template = `$adventurer, I have received a $message from the planet $pre$post.
+
+It appears the $people that reside on that planet have assembled their first crew and launched their spacecraft into the cosmos, but that spacecraft is now being threatened by a $threat!
+
+I need you to take your ship, $ship, and travel at lightspeed to the threatened spacecraft before it's too late!
+
+Ensure that the crew returns to $planet safely, and I shall reward you with $num $currency. Oh, and try not to run into any $obstacles on the way there!
+`;
+
+
+// STUDENTS: You don't need to edit code below this line.
+
+const slotPattern = /\$(\w+)/;
+
+function replacer(match, name) {
+  let options = fillers[name];
+  if (options) {
+    return options[Math.floor(Math.random() * options.length)];
+  } else {
+    return `<UNKNOWN:${name}>`;
+  }
 }
 
+function generate() {
+  let story = template;
+  while (story.match(slotPattern)) {
+    story = story.replace(slotPattern, replacer);
+  }
+
+$("#box").text(story);
+}
+$("#clicker").click(generate);
+generate();
+
+
 // let's get this party started - uncomment me
-//main();
+main();
