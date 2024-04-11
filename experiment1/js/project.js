@@ -42,7 +42,7 @@ It appears the $people that reside on that planet have assembled their first cre
 
 I need you to take your ship, $ship, and travel at lightspeed to the threatened spacecraft before it's too late!
 
-Ensure that the crew returns to $planet safely, and I shall reward you with $num $currency. Oh, and try not to run into any $obstacles on the way there!
+Ensure that the crew returns safely, and I shall reward you with $num $currency. Oh, and try not to run into any $obstacles on the way there!
 `;
 
 
