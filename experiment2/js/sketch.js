@@ -7,11 +7,8 @@
 
 // Constants - User-servicable parts
 // In a longer project I like to put these in a separate file
-/* exported setup, draw */
 
-/* exported setup, draw */
 let seed = 0;
-
 
 const skyColor = "#000000";
 const grassColor = "#35e54b";
@@ -24,6 +21,19 @@ const planetColor2 = "#16a1ae"
 const mountainColor = "#473f3f"
 const orange = "#e88110"
 
+function resizeScreen() {
+  centerHorz = canvasContainer.width() / 2; // Adjusted for drawing logic
+  centerVert = canvasContainer.height() / 2; // Adjusted for drawing logic
+  console.log("Resizing...");
+  resizeCanvas(canvasContainer.width(), canvasContainer.height());
+  // redrawCanvas(); // Redraw everything based on new size
+}
+
+// listener for reimagine button
+$("#reimagine").click(function() {
+  seed++;
+});
+
 function setup() {  
   canvasContainer = $("#canvas-container");
   let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
@@ -35,7 +45,7 @@ function setup() {
 }
 
 
-
+// draw() function is called repeatedly, it's the main animation loop
 function draw() {
   randomSeed(seed);
   background(100);
@@ -107,5 +117,9 @@ function draw() {
   vertex(width, height / 0.9);
   endShape(CLOSE);
   
-  
+}
+
+// mousePressed() function is called once after every time a mouse button is pressed
+function mousePressed() {
+    // code to run when mouse is pressed
 }
