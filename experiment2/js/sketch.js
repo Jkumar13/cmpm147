@@ -61,7 +61,7 @@ function draw() {
   circle(width/2, height/2, width/4);
   
   fill(orange);
-  arc(90, 50, 355, 80, 0.01, 1.3, 1.5);
+  arc(width/2.9, height/3, 200, 80, 0.01, 1.3, 1.5);
 
   
   const planets = 70*random();
