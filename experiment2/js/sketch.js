@@ -24,10 +24,16 @@ const planetColor2 = "#16a1ae"
 const mountainColor = "#473f3f"
 const orange = "#e88110"
 
-function setup() {
-  createCanvas(400, 200);
-  createButton("reimagine").mousePressed(() => seed++);
+function setup() {  
+  canvasContainer = $("#canvas-container");
+  let canvas = createCanvas(canvasContainer.width(), canvasContainer.height());
+  canvas.parent("canvas-container");
+  $(window).resize(function() {
+    resizeScreen();
+  });
+  resizeScreen();
 }
+
 
 
 function draw() {
