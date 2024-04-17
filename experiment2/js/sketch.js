@@ -58,7 +58,7 @@ function draw() {
   rect(0, 0, width, height/1.3);
   
   fill(planetColor2);
-  circle(200, 125, 200);
+  circle(width/2, height/2, width/2);
   
   fill(orange);
   arc(90, 50, 355, 80, 0.01, 1.3, 1.5);
