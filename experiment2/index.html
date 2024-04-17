@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Experiment 2</title>
+	<title>Experiment 2 - Generating Space</title>
 
 	<!-- Use UTF character set, a good idea with any webpage -->
 	<meta charset="UTF-8" />
@@ -32,7 +32,7 @@
 	<main id="content">
 		<section>
 
-			<h1>Experiment 2</h1>
+			<h1>Experiment 2 - Generating Space</h1>
 
 			<div class="minor-section">
 				<div id="canvas-container">
@@ -52,7 +52,11 @@
 			<div class="minor-section">
 				<h2>Description</h2>
 				<p>
-					This experiment generates an image that reflects a space-themed background: https://cdn.glitch.global/cd0095cb-a83f-4bdc-a778-e789344810a0/space%20background.png?v=1713336352521.
+					This experiment generates an image that reflects a space-themed background:
+					<br>
+					<div class="image-wrapper">
+					<ing src="https://cdn.glitch.global/cd0095cb-a83f-4bdc-a778-e789344810a0/space%20background.png?v=1713336352521"></ing>
+					<br>
 					Source: https://pngtree.com/freebackground/space-mountain-peak-planet-background_2270730.html
 				</p>
 			</div>
@@ -61,10 +65,15 @@
 				<h2>Technical</h2>
 				<p>
 				Relation to the image:
+				<br>
 					- Color: The large planet in the center of the galaxy is mostly blue and also contains the orange fissure in its center. The mountain range on the planet surface contains a brown base, along with darker-grey mountain ranges.
+					<br>
 					- Primitives: The planets are generated with circle() calls.
+					<br>
 					- Polygons: The mountain range is a combination of two polygons that use vertex calls. The first polygon represents the planet's surface and the second represents the spiky mountain ranges, thus creating a sort of layering effect.
+					<br>
 					- Composition: Different random seed values lead to differently shaped mountain ranges and differently positioned planets in space.
+					<br>
 					- Life: The position of the planets changes over time as to simulare orbital movement of the planets from your view. You can also use your mouse to accelerate the orbit of these planets.
 					
 				</p>
@@ -73,7 +82,7 @@
 			<div class="minor-section">
 				<h2>Reflection</h2>
 				<p> 
-					text
+					I personally faced a challenge when it came to simply choosing the image I wanted to base off of. However, once I chose my image, I faced many issues with getting every stellar/planetary object in the right position. I wanted the planet's brown-grey surface crust to be seen in my generation, so I had to learn how to layer these polygons over each other in a way that looked natural. Once all of these aspects came together, I faced issues with integrating it into my portfolio website, but these issues were resolved eventually, as I am slowly learning more about html! I did also face submission issues due to the power outage on campus, unfortunately.
 				</p>
 			</div>
 
