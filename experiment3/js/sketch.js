@@ -217,7 +217,7 @@ function drawGridO(grid) {
     }
   }
   
-  const scrub = mouseY / myp5_1.height; 
+  const scrub = myp5_1.mouseY / myp5_1.height; 
   
   noStroke();
   
@@ -359,7 +359,7 @@ function drawGrid(grid) {
     }
   }
   
-  const scrub = mouseY / myp5_1.height; 
+  const scrub = myp5_1.mouseY / myp5_1.height; 
   
   noStroke();
   
