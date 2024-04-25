@@ -205,7 +205,7 @@ function drawGridO(grid) {
     for(let j = 0; j < grid[i].length; j++) {
     
       if (gridCheck(grid, i, j, ".")) {
-        placeTile(i, j, random(4) | 0, 0);
+        myp5_1.placeTile(i, j, random(4) | 0, 0);
       }
      
       else {
@@ -254,7 +254,7 @@ function drawContextO(grid, i, j, target, ti, tj) {
 
   if (code < lookup.length) {
     const [tiOffset, tjOffset] = lookup[code];
-    placeTile(i, j, ti + tiOffset, tj + tjOffset);
+    myp5_1.placeTile(i, j, ti + tiOffset, tj + tjOffset);
   }
 }
 
@@ -334,18 +334,18 @@ function drawGrid(grid) {
     for(let j = 0; j < grid[i].length; j++) {
     
       if (gridCheck(grid, i, j, ".")) {
-        placeTile(i, j, random(4) | 3, 24 - random(1));
+        myp5_1.placeTile(i, j, random(4) | 3, 24 - random(1));
       }
       else if (gridCheck(grid, i, j, "-")) {
         if (myp5_1.noise(i/5,j/5) > 0.65) {
-          placeTile(i, j, random(4) | 3, 30 - random(1));
+          myp5_1.placeTile(i, j, random(4) | 3, 30 - random(1));
         }
         else if (myp5_1.noise(i/10,j/10) > 0.65) {
-          placeTile(i, j, 30, 3);
+          myp5_1.placeTile(i, j, 30, 3);
 
         }
         else {
-          placeTile(i, j, random(4) | 3, 9 + random(1));          
+          myp5_1.placeTile(i, j, random(4) | 3, 9 + random(1));          
         }
       }
      
@@ -397,7 +397,7 @@ function drawContext(grid, i, j, target, ti, tj) {
 
   if (code < lookup.length) {
     const [tiOffset, tjOffset] = lookup[code];
-    placeTile(i, j, ti + tiOffset, tj + tjOffset);
+    myp5_1.placeTile(i, j, ti + tiOffset, tj + tjOffset);
   }
 }
 
