@@ -205,7 +205,7 @@ function drawGridO(grid) {
     for(let j = 0; j < grid[i].length; j++) {
     
       if (gridCheck(grid, i, j, ".")) {
-        myp5_1.placeTile(i, j, random(4) | 0, 0);
+        myp5_1.placeTile(i, j, myp5_1.random(4) | 0, 0);
       }
      
       else {
@@ -217,16 +217,16 @@ function drawGridO(grid) {
     }
   }
   
-  const scrub = mouseY / height; 
+  const scrub = mouseY / myp5_1.height; 
   
   noStroke();
   
-  fill("#0068ff"); 
+  myp5_1.fill("#0068ff"); 
   for (let i = 0; i < 20; i++) {
-    let r = 7 * random(); 
-    let z = random(); 
-    let y = height * (((scrub / 50 + millis() / 6500) / z) % 1);
-    let x = width * random();
+    let r = 7 * myp5_1.random(); 
+    let z = myp5_1.random(); 
+    let y = myp5_1.height * (((scrub / 50 + millis() / 6500) / z) % 1);
+    let x = myp5_1.width * myp5_1.random();
     rect(x, y, r, r); 
   }
 }
@@ -302,9 +302,9 @@ function generateGrid(numCols, numRows) {
   }
   
   // let rectX = Math.floor(Math.random() * (numCols - 1)) + 1;
-  let rectY = Math.floor(Math.random() * (numRows - 1)) + 1;
-  // let rectX2 = rectX + Math.floor(Math.random() * (numCols - rectX)) - 1;
-  let rectY2 = rectY + Math.floor(Math.random() * (numRows - rectY)) - 1;
+  let rectY = myp5_1.floor(myp5_1.random() * (numRows - 1)) + 1;
+  // let rectX2 = rectX + myp5_1.floor(myp5_1.random() * (numCols - rectX)) - 1;
+  let rectY2 = rectY + myp5_1.floor(myp5_1.random() * (numRows - rectY)) - 1;
 
   for (let i = rectY; i <= rectY2; i++) {
     grid[i][grid.length-2] = "-";
@@ -334,18 +334,18 @@ function drawGrid(grid) {
     for(let j = 0; j < grid[i].length; j++) {
     
       if (gridCheck(grid, i, j, ".")) {
-        myp5_1.placeTile(i, j, random(4) | 3, 24 - random(1));
+        myp5_1.placeTile(i, j, myp5_1.random(4) | 3, 24 - myp5_1.random(1));
       }
       else if (gridCheck(grid, i, j, "-")) {
         if (myp5_1.noise(i/5,j/5) > 0.65) {
-          myp5_1.placeTile(i, j, random(4) | 3, 30 - random(1));
+          myp5_1.placeTile(i, j, myp5_1.random(4) | 3, 30 - myp5_1.random(1));
         }
         else if (myp5_1.noise(i/10,j/10) > 0.65) {
           myp5_1.placeTile(i, j, 30, 3);
 
         }
         else {
-          myp5_1.placeTile(i, j, random(4) | 3, 9 + random(1));          
+          myp5_1.placeTile(i, j, myp5_1.random(4) | 3, 9 + myp5_1.random(1));          
         }
       }
      
@@ -359,16 +359,16 @@ function drawGrid(grid) {
     }
   }
   
-  const scrub = mouseY / height; 
+  const scrub = mouseY / myp5_1.height; 
   
   noStroke();
   
-  fill("#ffffff"); 
+  myp5_1.fill("#ffffff"); 
   for (let i = 0; i < 10; i++) {
-    let r = 10 * random(); 
-    let z = random(); 
-    let y = height * (((scrub / 10 + millis() / 10000) / z) % 1);
-    let x = width * random();
+    let r = 10 * myp5_1.random(); 
+    let z = myp5_1.random(); 
+    let y = myp5_1.height * (((scrub / 10 + millis() / 10000) / z) % 1);
+    let x = myp5_1.width * myp5_1.random();
     rect(x, y, r, r); 
   }
   
