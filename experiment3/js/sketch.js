@@ -188,7 +188,7 @@ function generateGridO(numCols, numRows) {
   
   for(let i = 0; i < grid.length; i++) {
     for(let j = 0; j < grid[i].length; j++) {
-      if (noise(i/10,j/10) > 0.5) {
+      if (myp5_1.noise(i/10,j/10) > 0.5) {
         grid[i][j] = ".";  
       }
     }
@@ -328,7 +328,7 @@ function generateGrid(numCols, numRows) {
 
 
 function drawGrid(grid) {
-  background(128);
+  myp5_1.background(128);
 
   for(let i = 0; i < grid.length; i++) {
     for(let j = 0; j < grid[i].length; j++) {
@@ -337,10 +337,10 @@ function drawGrid(grid) {
         placeTile(i, j, random(4) | 3, 24 - random(1));
       }
       else if (gridCheck(grid, i, j, "-")) {
-        if (noise(i/5,j/5) > 0.65) {
+        if (myp5_1.noise(i/5,j/5) > 0.65) {
           placeTile(i, j, random(4) | 3, 30 - random(1));
         }
-        else if (noise(i/10,j/10) > 0.65) {
+        else if (myp5_1.noise(i/10,j/10) > 0.65) {
           placeTile(i, j, 30, 3);
 
         }
